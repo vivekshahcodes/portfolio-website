@@ -3,6 +3,7 @@ body {
     color: #FFFFFF;
     font-family: Poppins;
     max-width: 1440px;
+    align-items: center;
 }
 
 a{
@@ -37,17 +38,23 @@ nav #logo {
     font-size: 25px;
 }
 
-nav #home {
+nav a:hover {
     color: #FF6D03;
 }
 
 nav #contactme {
     background: #FFFFFF;
     font-weight: bold;
-    color: #2F2E41;
+    color: black;
     border-radius: 18.5px;
     padding: 3px 25px;
 }
+
+nav #contactme:hover {
+    background-color: #FF6D03;
+}
+
+/* INDEX PAGE */
 
 .main {
     display: flex;
@@ -71,11 +78,24 @@ nav #contactme {
     color: #FF6D03;
     max-width: 671px;
     flex-wrap: wrap;
-    margin-top: 14px;
+    margin: 14px auto;
+}
+
+.main #myworkbtn {
+    margin-top: 47px;
+}
+
+.main a span img {
+    width: 26px;
 }
 
 .main #mvector {
     margin-top: 22px;
+}
+
+.main #mvector img {
+    width: 477px;
+    height: 472px;
 }
 
 .main a {
@@ -96,13 +116,200 @@ nav #contactme {
     letter-spacing: 0.05em;
 }
 
+/* MY WORK */
+
+.wmain {
+    max-width: 81.875%;
+    margin: 108px auto;
+}
+
+.wcontent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wcontent #wtitle #wtcap {
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+
+.wcontent #wtitle #wt {
+    font-weight: bold;
+    font-size: 48px;
+    color: #FF6D03;
+    margin-top: 14px;
+}
+
+.wcontent #wdesc {
+    max-width: 800px;
+    font-size: 16px;
+    letter-spacing: 0.025em;
+    line-height: 36px;
+}
+
+.wimages {
+    display: flex;
+    flex-flow: row wrap;
+    height: 750px;
+    margin: 0 auto;
+}
+
+.wimages div {
+    width: 350px;
+    height: 250px;
+    margin: auto;
+    background: #C4C4C4;
+}
+
+/* RESPONSIVE CODE */
+
+@media (max-width: 1024px) {
+
+    nav {
+        font-size: 15px;
+    }
+
+    nav #logo {
+        font-size: 20px;
+    }
+
+    .main #tagline {
+        font-size: 15px;
+    }
+
+    .main #desc {
+        font-size: 48px;
+    }
+    .main #mvector img {
+        width: 377px;
+        height: 372px;
+    }
+
+    .main a span img {
+        width: 20px;
+    }
+
+    .main a {
+        max-width: 150px;
+        max-height: 30px;
+        font-size: 18px;
+    }
+
+    .wcontent #wtitle #wtcap {
+        font-size: 12px;
+    }
+
+    .wcontent #wtitle #wt {
+        font-size: 44px;
+    }
+
+    .wcontent #wdesc {
+        max-width: 565px;
+    }
+
+    .wimages {
+        height: 1000px;
+        margin-top: 50px;
+    }
+}
+
 @media (max-width: 768px) {
+    
     nav, nav ul {
         flex-direction: column;
         align-items: center;
     }
 
     .main {
+        flex-direction: column-reverse;
+        margin: 30px auto;
+    }
+
+    .main #mdesc {
+        text-align: center;
+    }
+
+    .main #desc {
+        max-width: 400px;
+    }
+
+    .main a{
+        display: block;
+        margin: auto;
+    }
+
+    #mvector img{
+        display: block;
+        margin: auto;
+    }
+
+    .wmain {
+        margin: 30px auto;
+    }
+
+    .wcontent {
         flex-direction: column;
+    }
+
+    .wcontent #wtitle #wtcap {
+        text-align: center;
+    }
+
+    .wcontent #wtitle #wt {
+        text-align: center;
+    }
+
+    .wcontent #wdesc {
+        margin: auto;
+        text-align: center;
+        max-width: 500px;
+    }
+
+    .wimages {
+        height: 2200px;
+    }
+
+    .wimages div {
+        width: 350px;
+        height: 250px;
+        
+    }
+}
+
+@media (max-width: 426px) {
+    #mvector img {
+        max-width: 350px;
+        max-height: 350px;
+    }
+}
+
+@media (max-width: 376px) {
+    #mvector img {
+        max-width: 300px;
+        max-height: 300px;
+    }
+
+    .main #desc {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 321px) {
+    #mvector img {
+        max-width: 270px;
+        max-height: 270px;
+    }
+}
+
+@media (max-width: 281px) {
+    #mvector img {
+        max-width: 240px;
+        max-height: 240px;
+    }
+
+    .main #desc {
+        font-size: 32px;
     }
 }
