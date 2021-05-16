@@ -3,6 +3,7 @@ body {
     color: #FFFFFF;
     font-family: Poppins;
     max-width: 1440px;
+    max-height: 645px;
     align-items: center;
 }
 
@@ -163,9 +164,135 @@ nav #contactme:hover {
     background: #C4C4C4;
 }
 
+/* SKILLS SECTION */
+
+.smain {
+    max-width: 81.875%;
+    margin: 108px auto;
+}
+
+.smain #shead {
+    font-weight: bold;
+    font-size: 48px;
+    color: #FF6D03;
+    text-align: center;
+}
+
+.skill {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill p {
+    font-weight: bold;
+    font-size: 28px;
+    color: #FF6D03;
+}
+
+.skill .skillbar {
+    width: 500px;
+    height: 28px;
+    background: #C4C4C4;
+    border-radius: 25px;
+    margin-top: 32px;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: bold;
+}
+
+.skill .skillbar span {
+    position: absolute;
+}
+
+#webdev, #dbms {
+    background: #FF6D03;
+    width: 85%;
+    height: 28px;
+    border-radius: 25px;
+}
+
+#ad {
+    background: #FF6D03;
+    width: 75%;
+    height: 28px;
+    border-radius: 25px;
+}
+
+#uiux, #ds, #cs {
+    background: #FF6D03;
+    width: 80%;
+    height: 28px;
+    border-radius: 25px;
+}
+
+#algo {
+    background: #FF6D03;
+    width: 90%;
+    height: 28px;
+    border-radius: 25px;
+}
+
+#gd {
+    background: #FF6D03;
+    width: 70%;
+    height: 28px;
+    border-radius: 25px;
+}
+
+/* CONTACT ME */
+
+.cmain {
+    max-width: 81.875%;
+    margin: 108px auto;
+    text-align: center;
+}
+
+.cmain p {
+    font-weight: bold;
+    font-size: 48px;
+    color: #FF6D03;
+}
+
+.contactways {
+    display: flex;
+}
+
+.cmain form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.cmain form input {
+    width: 580px;
+    height: 50px;
+    margin-bottom: 25px;
+}
+
+.cmain form textarea {
+    width: 580px;
+    margin-bottom: 25px;
+}
+
+input[type="text"]::placeholder, textarea::placeholder {
+    font-family: Poppins;
+}
+
+.cmain form a {
+    background: #FF6D03;
+    box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+    padding: 15px 100px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
 /* RESPONSIVE CODE */
 
 @media (max-width: 1024px) {
+
+    /* NAVBAR */
 
     nav {
         font-size: 15px;
@@ -174,6 +301,8 @@ nav #contactme:hover {
     nav #logo {
         font-size: 20px;
     }
+
+    /* INDEX PAGE */
 
     .main #tagline {
         font-size: 15px;
@@ -197,6 +326,8 @@ nav #contactme:hover {
         font-size: 18px;
     }
 
+    /* MYWORK PAGE */
+
     .wcontent #wtitle #wtcap {
         font-size: 12px;
     }
@@ -213,14 +344,28 @@ nav #contactme:hover {
         height: 1000px;
         margin-top: 50px;
     }
+
+    /* SKILLS PAGE */
+
+    .skill p {
+        font-size: 24px;
+    }
 }
 
 @media (max-width: 768px) {
+
+    /* NAVBAR */
+
+    body {
+        max-height: 2200px;
+    }
     
     nav, nav ul {
         flex-direction: column;
         align-items: center;
     }
+
+    /* INDEX PAGE */
 
     .main {
         flex-direction: column-reverse;
@@ -244,6 +389,8 @@ nav #contactme:hover {
         display: block;
         margin: auto;
     }
+
+    /* MYWORK PAGE */
 
     .wmain {
         margin: 30px auto;
@@ -276,12 +423,61 @@ nav #contactme:hover {
         height: 250px;
         
     }
+
+    /* SKILLS PAGE */
+    
+    .skill {
+        flex-direction: column;
+        margin-bottom: 80px;
+    }
+
+    .skill .skillbar {
+        width: 380px;
+    }
+
+    /* CONTACT ME */
+
+    .cmain form input {
+        width: 420px;
+        height: 40px;
+        margin-bottom: 25px;
+    }
+    
+    .cmain form textarea {
+        width: 420px;
+        margin-bottom: 25px;
+    }
+
 }
 
 @media (max-width: 426px) {
     #mvector img {
         max-width: 350px;
         max-height: 350px;
+    }
+
+    .skill .skillbar {
+        width: 300px;
+    }
+
+    .cmain form input {
+        width: 320px;
+        height: 40px;
+        margin-bottom: 25px;
+    }
+    
+    .cmain form textarea {
+        width: 320px;
+        margin-bottom: 25px;
+    }
+
+    .cmain form a {
+        padding: 12px 60px;
+        font-size: 20px;
+    }
+
+    .cmain p {
+        font-size: 40px;
     }
 }
 
@@ -294,12 +490,45 @@ nav #contactme:hover {
     .main #desc {
         font-size: 36px;
     }
+
+    .skill .skillbar {
+        width: 270px;
+    }
+
+    .cmain p {
+        font-size: 35px;
+    }
+    
 }
 
 @media (max-width: 321px) {
     #mvector img {
         max-width: 270px;
         max-height: 270px;
+    }
+
+    .skill .skillbar {
+        width: 240px;
+    }
+
+    .cmain form input {
+        width: 240px;
+        height: 40px;
+        margin-bottom: 25px;
+    }
+    
+    .cmain form textarea {
+        width: 240px;
+        margin-bottom: 25px;
+    }
+
+    .cmain form a {
+        padding: 10px 50px;
+        font-size: 18px;
+    }
+
+    .cmain p {
+        font-size: 30px;
     }
 }
 
