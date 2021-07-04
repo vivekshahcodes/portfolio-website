@@ -1,2 +1,2 @@
 # Portfolio-Website
-This is my portfolio website. Browse through it, contact me, and let's get the party started.
+This is my portfolio website. Browse through it and contact me for collaboration.
